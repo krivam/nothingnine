@@ -4,240 +4,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NothingNine - VK Financial Calculator</title>
-    <style>
-        :root {
-            --primary-color: #0056b3;
-            --secondary-color: #f8f9fa;
-            --text-dark: #212529;
-            --text-light: #6c757d;
-        }
-
-        /* --- STICKY FOOTER FIX --- */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--secondary-color);
-            color: var(--text-dark);
-        }
-
-        main {
-            flex: 1 0 auto;
-            /* This pushes the footer down */
-        }
-
-        footer {
-            flex-shrink: 0;
-            text-align: center;
-            padding: 20px 0;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            background: #fff;
-            border-top: 1px solid #eee;
-        }
-
-        /* --- HEADER & DROPDOWN --- */
-        .site-header {
-            background: #fff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-toggle {
-            color: var(--text-light);
-            font-weight: 500;
-            cursor: pointer;
-            padding: 10px 0;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            right: 0;
-            background: #fff;
-            min-width: 220px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 10px 0;
-            margin-top: 5px;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu a {
-            color: var(--text-dark);
-            padding: 10px 20px;
-            display: block;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .dropdown-menu a:hover {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-        }
-
-        /* --- APP MODULE --- */
-        .app-module {
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin: 60px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .app-intro {
-            flex: 1 1 300px;
-        }
-
-        .app-intro h1 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-
-        .playstore-btn {
-            display: inline-flex;
-            align-items: center;
-            background: #000;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .playstore-btn svg {
-            width: 20px;
-            height: 20px;
-            margin-right: 12px;
-            fill: #fff;
-        }
-
-        /* --- FEATURE GRID --- */
-        .features-area {
-            flex: 1 1 400px;
-        }
-
-        .calculator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .calc-item {
-            background: var(--secondary-color);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            border: 1px solid #e9ecef;
-        }
-
-        @media (max-width: 768px) {
-            .app-module {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+    <meta name="description"
+        content="NothingNine is the developer home of VK Financial Calculator, a simple Android utility for everyday financial calculations.">
+    <title>NothingNine — Independent Android Apps</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <header class="site-header">
-        <div class="container header-content">
-            <a href="https://nothingnine.com" class="logo">NothingNine</a>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Privacy Policy ▾</span>
-                <div class="dropdown-menu">
-                    <a href="vkfincalc-privacy.html">VK Financial Calculator</a>
-                </div>
-            </div>
+        <div class="site-shell header-inner">
+            <a href="index.html" class="wordmark" aria-label="NothingNine home">NothingNine</a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#featured">Featured app</a>
+                <a href="vkfincalc-privacy.html">Privacy</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <section class="app-module">
-                <div class="app-intro">
-                    <h1>VK Financial Calculator</h1>
-                    <p>Advanced financial calculator with detailed reports for the Indian market. Precision tools for
-                        SIP, GST, Inflation, Chit Funds, Home/Personal/Car Loan, Post Office Schemes, Govt. Schemes, and
-                        more at your fingertips.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.nothingnine.financecalculator&hl=en_IN" class="playstore-btn">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M3 22v-20l18 10-18 10z" />
-                        </svg>
-                        Get it on Google Play
-                    </a>
-                </div>
-                <div class="features-area">
-                    <h3>Included Calculators:</h3>
-                    <div class="calculator-grid">
-                        <div class="calc-item">SIP Planner</div>
-                        <div class="calc-item">SWP Planner</div>
-                        <div class="calc-item">Loan / EMI</div>
-                        <div class="calc-item">GST Calc</div>
-                        <div class="calc-item">FD & RD Returns</div>
-                        <div class="calc-item">PPF Calc</div>
-                        <div class="calc-item">Income Tax</div>
-                        <div class="calc-item">Inflation</div>
-                        <div class="calc-item">Chit Fund Calc</div>
-                        <div class="calc-item">Govt Schemes</div>
-                        <div class="calc-item">Historic Inflation</div>
-                        <div class="calc-item">Historic Index/Gold</div>
-                        <div class="calc-item">Jewellery Cost Estimator</div>
+        <section class="featured-app site-shell" id="featured" aria-labelledby="featured-title">
+            <div class="section-marker">
+                <span>Featured app</span>
+                <span>Android</span>
+            </div>
+
+            <div class="featured-grid">
+                <div class="featured-copy">
+                    <div class="app-identity">
+                        <img class="app-icon" src="assets/vk_fin_cal/vk_finacial_calculator_icon.png"
+                            alt="VK Financial Calculator app icon" width="1024" height="1024">
+                        <p>By NothingNine</p>
                     </div>
+                    <h1 id="featured-title">VK Financial Calculator</h1>
+                    <p class="featured-intro">A simple financial utility to calculate and estimate your SIP investment
+                        returns, EMI and loan payments, retirement income, chit funds, GST, inflation, and more.</p>
+                    <p class="developer-note">I built it to keep the calculations I reach for in one straightforward
+                        Android app—without accounts, sign-ups, or unnecessary setup.</p>
+                    <a class="play-store-link"
+                        href="https://play.google.com/store/apps/details?id=com.nothingnine.financecalculator&amp;hl=en_IN"
+                        aria-label="Get VK Financial Calculator on Google Play">
+                        <img src="assets/play_store_badge.svg" alt="Get it on Google Play" width="180" height="53">
+                    </a>
+                    <aside class="purpose-note" aria-label="About the purpose of the app">
+                        <strong>For calculations only.</strong> VK Financial Calculator does not provide or promote
+                        financial services, products, or advice.
+                    </aside>
                 </div>
-            </section>
-        </div>
+
+                <figure class="featured-screen">
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_1.png"
+                        alt="VK Financial Calculator screen showing its calculator categories" width="1080"
+                        height="1920">
+                    <figcaption>Browse calculators by category or search for the one you need.</figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section class="screens-section" id="screens" aria-labelledby="screens-title">
+            <div class="site-shell screens-intro">
+                <div>
+                    <p class="section-label">A look inside</p>
+                    <h2 id="screens-title">Screens from the current release.</h2>
+                </div>
+                <p>Calculator inputs, results, and reports from the Android app.</p>
+            </div>
+
+            <div class="screenshot-grid site-shell" aria-label="VK Financial Calculator screenshots">
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_2.png"
+                        alt="Advanced home loan calculator input screen" width="1080" height="1920" loading="lazy">
+                    <figcaption>Advanced loan inputs</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_3.png"
+                        alt="Home loan calculation result with principal and interest breakdown" width="1080"
+                        height="1920" loading="lazy">
+                    <figcaption>Loan breakdown</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_4.png"
+                        alt="Month-by-month home loan repayment report" width="1080" height="1920" loading="lazy">
+                    <figcaption>Repayment report</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_5.png"
+                        alt="Systematic Investment Plan calculator input screen" width="1080" height="1920"
+                        loading="lazy">
+                    <figcaption>SIP inputs</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_6.png"
+                        alt="Systematic Investment Plan estimate with chart" width="1080" height="1920"
+                        loading="lazy">
+                    <figcaption>SIP estimate</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/vk_fin_cal/app_screenshots/playstore_screenshot_7.png"
+                        alt="Jewellery cost estimator input screen" width="1080" height="1920" loading="lazy">
+                    <figcaption>Jewellery cost estimate</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="calculator-section site-shell" id="calculators" aria-labelledby="calculators-title">
+            <div class="section-intro calculator-intro">
+                <div>
+                    <p class="section-label">Current collection</p>
+                    <h2 id="calculators-title">What you can calculate</h2>
+                </div>
+                <p>The app currently brings together calculators across these nine categories.</p>
+            </div>
+
+            <div class="calculator-groups">
+                <section class="calculator-group">
+                    <h3>Mutual Funds</h3>
+                    <ul>
+                        <li>Systematic Investment Plan (SIP)</li>
+                        <li>SIP Goal (Reverse SIP)</li>
+                        <li>Systematic Withdrawal Plan (SWP)</li>
+                        <li>Index Returns (Historic)</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Loans</h3>
+                    <ul>
+                        <li>Home Loan</li>
+                        <li>Home Loan (Advanced)</li>
+                        <li>Bike Loan</li>
+                        <li>Car Loan</li>
+                        <li>Personal Loan</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Retirement</h3>
+                    <ul>
+                        <li>National Pension System (NPS)</li>
+                        <li>Public Provident Fund (PPF)</li>
+                        <li>Employee Provident Fund (EPF)</li>
+                        <li>Atal Pension Yojana (APY)</li>
+                        <li>PM Shram Yogi Maandhan (PMSYM)</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Bank Schemes</h3>
+                    <ul>
+                        <li>FD Cumulative</li>
+                        <li>FD Payout</li>
+                        <li>Recurring Deposit (RD)</li>
+                        <li>Sukanya Samriddhi Yojana (SSY)</li>
+                        <li>Senior Citizen Savings Scheme (SCSS)</li>
+                        <li>Kisan Vikas Patra (KVP)</li>
+                        <li>Mahila Samman Savings Certificate (MSSC)</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Post Office</h3>
+                    <ul>
+                        <li>Post Office Monthly Income (POMIS)</li>
+                        <li>Post Office RD (PORD)</li>
+                        <li>Post Office Time Deposit (POTD)</li>
+                        <li>National Savings Certificate (NSC)</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Bonds</h3>
+                    <ul>
+                        <li>Sovereign Gold Bond (SGB)</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Tax</h3>
+                    <ul>
+                        <li>GST Calculator</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>Employees</h3>
+                    <ul>
+                        <li>HRA Exemption</li>
+                        <li>Gratuity Calculator</li>
+                    </ul>
+                </section>
+
+                <section class="calculator-group">
+                    <h3>General</h3>
+                    <ul>
+                        <li>Future Value</li>
+                        <li>Simple Interest</li>
+                        <li>Inflation Calculator</li>
+                        <li>Inflation (Historic)</li>
+                        <li>Discount &amp; Markup Calculator</li>
+                        <li>Chit Fund Calculator</li>
+                        <li>Jewellery Cost Estimator</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        &copy; 2026 NothingNine. All rights reserved.
+    <footer class="site-footer" id="contact">
+        <div class="site-shell">
+            <div class="footer-heading">
+                <p class="section-label">About &amp; Contact</p>
+                <h2>NothingNine is where I share the apps I build.</h2>
+                <p>VK Financial Calculator is the first app featured here. More may join it in time.</p>
+            </div>
+            <dl class="footer-details">
+                <div>
+                    <dt>Developer</dt>
+                    <dd>B Vamsi Krishna</dd>
+                </div>
+                <div>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:hi@nothingnine.com">hi@nothingnine.com</a></dd>
+                </div>
+                <div>
+                    <dt>App privacy</dt>
+                    <dd><a href="vkfincalc-privacy.html">Read privacy policy</a></dd>
+                </div>
+            </dl>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NothingNine</p>
+                <a href="#featured">Back to top ↑</a>
+            </div>
+        </div>
     </footer>
-
 </body>
-
 
 </html>
