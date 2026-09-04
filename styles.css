@@ -23,11 +23,9 @@
 
     /* On the paper background */
     --muted-on-paper: #5b5850;
-    --body-on-paper: #3a3830;
     --rule-on-paper: #d6d2c7;
 
     --shell: min(calc(100% - 40px), 1060px);
-    --shell-wide: min(calc(100% - 48px), 1240px);
     --reading: min(calc(100% - 48px), 720px);
 }
 
@@ -70,10 +68,6 @@ img {
     color: var(--paper);
 }
 
-.theme-paper {
-    background: var(--paper);
-    color: var(--ink);
-}
 
 .theme-ink a {
     color: var(--paper);
@@ -84,18 +78,8 @@ img {
     color: var(--lime);
 }
 
-.theme-paper a {
-    color: var(--lime-on-paper);
-    text-underline-offset: 3px;
-}
 
-.theme-paper a:hover {
-    color: var(--ink);
-}
 
-.theme-paper :focus-visible {
-    outline-color: var(--lime-on-paper);
-}
 
 .shell {
     width: var(--shell);
@@ -651,41 +635,10 @@ img {
     gap: 30px;
 }
 
-/* ---------- Privacy policy pages ---------- */
-
-.policy-header {
-    border-bottom: 1px solid var(--rule-on-paper);
-}
-
-.policy-header > div {
-    width: var(--shell-wide);
-    margin-inline: auto;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-}
-
-.policy-header .wordmark {
-    color: var(--ink);
-}
-
-.policy-header nav {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-}
-
-.policy-header nav a {
-    color: var(--muted-on-paper);
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.policy-header nav a:hover {
-    color: var(--ink);
-}
+/* ---------- Privacy policy pages ----------
+   Same ink surface, header and footer as every other page. The only thing
+   that changes is the column, which narrows to a comfortable reading
+   measure for long-form text. */
 
 .policy-main {
     padding-block: clamp(48px, 6vw, 80px) clamp(64px, 8vw, 110px);
@@ -702,26 +655,26 @@ img {
     gap: 10px;
     align-items: center;
     padding-bottom: clamp(32px, 4vw, 48px);
-    color: var(--muted-on-paper);
+    color: var(--nav-on-ink);
     font-size: 0.95rem;
 }
 
 .breadcrumb a {
-    color: var(--muted-on-paper);
+    color: var(--nav-on-ink);
     text-decoration: none;
 }
 
 .breadcrumb a:hover {
-    color: var(--ink);
+    color: var(--paper);
 }
 
 .breadcrumb .current {
-    color: var(--ink);
+    color: var(--paper);
 }
 
 .policy-eyebrow {
     margin: 0 0 14px;
-    color: var(--lime-on-paper);
+    color: var(--lime);
     font-size: 1rem;
 }
 
@@ -748,7 +701,7 @@ img {
 .policy h2 {
     margin: 46px 0 14px;
     padding-top: 24px;
-    border-top: 1px solid var(--rule-on-paper);
+    border-top: 1px solid var(--rule-on-ink);
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: -0.015em;
@@ -761,7 +714,7 @@ img {
     margin: 16px 0 0;
     font-size: 1.02rem;
     line-height: 1.72;
-    color: var(--body-on-paper);
+    color: var(--body-on-ink);
 }
 
 .policy ul {
@@ -772,7 +725,7 @@ img {
     gap: 10px;
     font-size: 1.02rem;
     line-height: 1.7;
-    color: var(--body-on-paper);
+    color: var(--body-on-ink);
 }
 
 .policy h2 + p,
@@ -781,20 +734,22 @@ img {
 }
 
 .policy strong {
-    color: var(--ink);
+    color: var(--paper);
     font-weight: 600;
 }
 
 .policy .effective-date {
     margin-top: 26px;
     padding: 14px 0;
-    border-top: 1px solid var(--rule-on-paper);
-    border-bottom: 1px solid var(--rule-on-paper);
-    color: var(--muted-on-paper);
+    border-top: 1px solid var(--rule-on-ink);
+    border-bottom: 1px solid var(--rule-on-ink);
+    color: var(--muted-on-ink);
     font-size: 0.98rem;
 }
 
+/* The label reads as part of the date line, not as emphasis within it. */
 .policy .effective-date strong {
+    color: var(--muted-on-ink);
     font-weight: 500;
 }
 
@@ -805,114 +760,21 @@ img {
 .policy .back-link {
     margin-top: 56px;
     padding-top: 26px;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule-on-ink-strong);
 }
 
 .policy .back-link a {
-    color: var(--ink);
+    color: var(--paper);
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--paper);
     padding-bottom: 2px;
 }
 
 .policy .back-link a:hover {
-    color: var(--lime-on-paper);
-    border-color: var(--lime-on-paper);
-}
-
-/* ---------- The dark footer on the privacy pages ---------- */
-
-.policy-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding-block: clamp(48px, 6vw, 72px) 26px;
-}
-
-.policy-footer > div {
-    width: var(--shell-wide);
-    margin-inline: auto;
-}
-
-.policy-footer dl {
-    margin: 0;
-    padding-bottom: clamp(32px, 4vw, 48px);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 32px 24px;
-}
-
-.policy-footer dl > div {
-    min-width: 0;
-}
-
-.policy-footer dt {
-    margin-bottom: 10px;
-    color: var(--caption-on-ink);
-    font-size: 0.95rem;
-    font-weight: 700;
-}
-
-.policy-footer dd {
-    margin: 0;
-    font-size: 0.98rem;
-}
-
-.policy-footer .sub {
-    margin-top: 4px;
-    color: var(--caption-on-ink);
-    font-size: 0.9rem;
-}
-
-.policy-footer .stack {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 0.94rem;
-}
-
-.policy-footer a {
-    color: var(--paper);
-    text-decoration-color: var(--lime);
-    text-underline-offset: 4px;
-}
-
-.policy-footer .stack a,
-.policy-footer .site-link a {
-    color: var(--list-on-ink);
-    text-decoration: none;
-}
-
-.policy-footer .stack a:hover,
-.policy-footer .site-link a:hover {
-    color: var(--paper);
-}
-
-.policy-footer .site-link {
-    font-size: 0.94rem;
-}
-
-.policy-footer-bottom {
-    padding-top: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    border-top: 1px solid rgba(246, 244, 239, 0.16);
-}
-
-.policy-footer-bottom p,
-.policy-footer-bottom a {
-    margin: 0;
-    color: var(--caption-on-ink);
-    font-size: 0.92rem;
-    text-decoration: none;
-}
-
-.policy-footer-bottom a:hover {
-    color: var(--paper);
+    color: var(--lime);
+    border-color: var(--lime);
 }
 
 @media (prefers-reduced-motion: reduce) {
